@@ -1,0 +1,98 @@
+$color-black: #000;
+$color-grey-light: #a5a5a5;
+$color-yellow: #f1a33c;
+$color-grey-dark: #333;
+$color-white: #fff;
+$color-input: #dbd8d3;
+$font-size-default: 45px;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px;
+  background-color: $color-black;
+  height: 840px;
+  width: 500px;
+  border-radius: 50px;
+  margin: 40px auto;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba($color-black, 0.5);
+}
+
+.calculator_input_display {
+  height: 12rem;
+  width: 28.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  text-align: right;
+  padding: 20px;
+}
+
+.inputScreen {
+  width: 275px;
+  height: 100px;
+  outline: none;
+  background-color: $color-black;
+  color: $color-white;
+  border: none;
+  font-size: 3rem;
+  overflow-y: hidden;
+  text-align: right;
+  resize: none;
+}
+
+.content {
+  height: 540px;
+  width: 440px;
+  font-size: $font-size-default;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  gap: 10px;
+}
+
+.box {
+  background-color: $color-grey-dark;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  transition: 0.3s all ease;
+  font-size: 2.4rem;
+  color: $color-white;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.row1-1,
+.row1-2,
+.row1-3 {
+  background-color: $color-grey-light;
+  color: $color-black;
+}
+
+.row1-4,
+.row2-4,
+.row3-4,
+.row4-4 {
+  background-color: $color-yellow;
+}
+
+.row5-1 {
+  grid-column: 1/3;
+  grid-row: 5/6;
+  border-radius: 55px;
+  text-align: left;
+  padding-left: 43px;
+}
